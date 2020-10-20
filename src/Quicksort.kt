@@ -19,11 +19,11 @@ fun quicksort(items: List<Int>): List<Int> {
     val smallerList: MutableList<Int> = mutableListOf()
     val equalList: MutableList<Int> = mutableListOf()
     val greaterList: MutableList<Int> = mutableListOf()
-    for (i in items) {
+    items.forEach {
         when {
-            i < chosenItem -> smallerList.add(i)
-            i > chosenItem -> greaterList.add(i)
-            else -> equalList.add(i)
+            it < chosenItem -> smallerList.add(it)
+            it > chosenItem -> greaterList.add(it)
+            else -> equalList.add(it)
         }
     }
 
